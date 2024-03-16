@@ -22,9 +22,9 @@ bool List<T, capacity>::full() {
 
 template <typename T, unsigned int capacity>
 void List<T, capacity>::insert(int pos, T entry) {
-    if (Full()) throw std::out_of_range("Lista cheia!");
+    if (full()) throw std::out_of_range("Lista cheia!");
     if (pos < 1 || pos > count+1) throw std::out_of_range("Posicao invalida!");
-    for (int i = count; i <= pos; i--)
+    for (int i = count; i >= pos; i--)
         Entry[i+1] = Entry[i];
     Entry[pos] = entry;
     count++;
@@ -32,7 +32,7 @@ void List<T, capacity>::insert(int pos, T entry) {
 
 template <typename T, unsigned int capacity>
 void List<T, capacity>::delete_value(int pos, T& entry) {
-    if (Empty()) throw std::out_of_range("Lista vazia!");
+    if (empty()) throw std::out_of_range("Lista vazia!");
     if (pos < 1 || pos > count+1) throw std::out_of_range("Posicao invalida!");
     entry = Entry[pos];
     for (int i = pos; i < count; i++)
@@ -42,14 +42,14 @@ void List<T, capacity>::delete_value(int pos, T& entry) {
 
 template <typename T, unsigned int capacity>
 void List<T, capacity>::retrieve(int pos, T& entry) {
-    if (Empty()) throw std::out_of_range("Lista vazia!");
+    if (empty()) throw std::out_of_range("Lista vazia!");
     if (pos < 1 || pos > count+1) throw std::out_of_range("Posicao invalida!");
     entry = Entry[pos];
 }
 
 template <typename T, unsigned int capacity>
 void List<T, capacity>::replace(int pos, T entry) {
-    if (Empty()) throw std::out_of_range("Lista vazia!");
+    if (empty()) throw std::out_of_range("Lista vazia!");
     if (pos < 1 || pos > count+1) throw std::out_of_range("Posicao invalida!");
     Entry[pos] = entry;
 }
