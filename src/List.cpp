@@ -63,3 +63,13 @@ template <typename T, unsigned int capacity>
 unsigned int List<T, capacity>::size() {
     return count;
 }
+
+template <typename T, unsigned int capacity>
+T* List<T, capacity>::begin() {
+    return &Entry[1];
+}
+
+template <typename T, unsigned int capacity>
+T* List<T, capacity>::end() {
+    return &Entry[count+1];
+}

@@ -24,6 +24,8 @@ class List {
         void replace(int pos, T entry);
         void clear();
         unsigned int size();
+        T* begin();
+        T* end();
 };
 
 #include "../src/List.cpp"
