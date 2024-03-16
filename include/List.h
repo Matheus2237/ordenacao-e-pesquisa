@@ -10,7 +10,7 @@ class List {
 
     private:
         const unsigned int MAX_LIST;
-        T Entry[capacity+1];
+        T entries[capacity+1];
         unsigned int count;
 
     public:
