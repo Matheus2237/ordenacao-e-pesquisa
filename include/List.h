@@ -24,9 +24,9 @@ class List {
         void replace(int pos, T entry);
         void clear();
         unsigned int size();
+        virtual void sort() = 0;
         T* begin();
         T* end();
-        virtual void sort() = 0;
 };
 
 #include "../src/List.cpp"
