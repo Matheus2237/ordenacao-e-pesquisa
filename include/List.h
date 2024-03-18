@@ -6,8 +6,6 @@
 template <typename T, unsigned int capacity>
 class List {
 
-    static_assert(std::is_arithmetic<T>::value && !std::is_same<T, bool>::value && !std::is_same<T, char>::value, "Classe aceita apenas tipos numericos");
-
     protected:
         const unsigned int MAX_LIST;
         T entries[capacity+1];
