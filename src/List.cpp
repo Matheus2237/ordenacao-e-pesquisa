@@ -79,3 +79,14 @@ template <typename T, unsigned int capacity>
 T* List<T, capacity>::end() {
     return &entries[count+1];
 }
+
+template <typename T, unsigned int capacity>
+bool List<T, capacity>::operator==(const List<T, capacity>& other) const {
+    if (this->count != other.count)
+        return false;
+    for (unsigned int i = 1; i <= this->count; ++i) {
+        if (this->entries[i] != other.entries[i])
+            return false;
+    }
+    return true;
+}

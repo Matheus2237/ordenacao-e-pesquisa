@@ -27,6 +27,7 @@ class List {
         virtual void sort() = 0;
         T* begin();
         T* end();
+        bool operator==(const List<T, capacity>& other) const;
 };
 
 #include "../src/List.cpp"
