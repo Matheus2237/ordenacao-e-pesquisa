@@ -7,6 +7,13 @@ List<T, capacity>::List(): MAX_LIST(capacity), count(0) {
 }
 
 template <typename T, unsigned int capacity>
+List<T, capacity>::List(std::initializer_list<T> initial_entries): MAX_LIST(capacity), count(0) {
+    static_assert(std::is_arithmetic<T>::value && !std::is_same<T, bool>::value && !std::is_same<T, char>::value, "Classe aceita apenas tipos numericos");
+    for (T entry : initial_entries)
+        this->insert(count+1, entry);
+}
+
+template <typename T, unsigned int capacity>
 List<T, capacity>::~List() {}
 
 template <typename T, unsigned int capacity>

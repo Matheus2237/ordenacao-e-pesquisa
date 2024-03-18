@@ -1,6 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include <initializer_list>
 #include <type_traits>
 
 template <typename T, unsigned int capacity>
@@ -13,6 +14,7 @@ class List {
 
     public:
         List();
+        List(std::initializer_list<T> initial_entries);
         ~List();
         bool empty();
         bool full();
