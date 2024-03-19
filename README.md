@@ -7,6 +7,7 @@ Este projeto implementa algoritmos de ordenação e pesquisa. As implementaçõe
 - **Ordenação**
   - Selection Sort
   - Bubble Sort
+  - Insertion Sort
 
 ## 🛠️ Ferramentas Utilizadas
 
