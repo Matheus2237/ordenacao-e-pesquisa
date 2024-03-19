@@ -28,6 +28,7 @@ class List {
         T* begin();
         T* end();
         bool operator==(const List<T, capacity>& other) const;
+        void swap(unsigned int pos, unsigned int other_pos);
 };
 
 #include "../src/List.cpp"

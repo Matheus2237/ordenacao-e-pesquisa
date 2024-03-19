@@ -11,10 +11,7 @@ void SelectionSortList<T, capacity>::sort() {
         for (unsigned int j = i+1; j <= this->count; j++)
             if (this->entries[j] < this->entries[pos_menor])
                 pos_menor = j;
-        if (this->entries[i] > this->entries[pos_menor]) {
-            T tmp = this->entries[pos_menor];
-            this->entries[pos_menor] = this->entries[i];
-            this->entries[i] = tmp;
-        }
+        if (this->entries[i] > this->entries[pos_menor])
+            this->swap(i, pos_menor);
     }
 }

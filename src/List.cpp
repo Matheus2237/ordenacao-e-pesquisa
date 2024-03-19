@@ -90,3 +90,10 @@ bool List<T, capacity>::operator==(const List<T, capacity>& other) const {
     }
     return true;
 }
+
+template <typename T, unsigned int capacity>
+void List<T, capacity>::swap(unsigned int pos, unsigned int other_pos) {
+    T tmp = this->entries[pos];
+    this->entries[pos] = this->entries[other_pos];
+    this->entries[other_pos] = tmp;
+}
