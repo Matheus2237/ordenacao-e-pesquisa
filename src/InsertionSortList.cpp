@@ -1,5 +1,4 @@
 #include "../include/InsertionSortList.h"
-#include <iostream>
 
 template <typename T, unsigned int capacity>
 InsertionSortList<T, capacity>::InsertionSortList(std::initializer_list<T> initial_enries) : List<T, capacity>(initial_enries) {}

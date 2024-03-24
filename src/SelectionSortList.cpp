@@ -1,5 +1,4 @@
 #include "../include/SelectionSortList.h"
-#include <iostream>
 
 template <typename T, unsigned int capacity>
 SelectionSortList<T, capacity>::SelectionSortList(std::initializer_list<T> initial_enries) : List<T, capacity>(initial_enries) {}

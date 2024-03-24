@@ -1,5 +1,4 @@
 #include "../include/BubbleSortList.h"
-#include <iostream>
 
 template <typename T, unsigned int capacity>
 BubbleSortList<T, capacity>::BubbleSortList(std::initializer_list<T> initial_enries) : List<T, capacity>(initial_enries) {}
