@@ -10,6 +10,7 @@ Este projeto implementa algoritmos de ordenação e pesquisa. As implementaçõe
   - Insertion Sort
   - Merge Sort
   - Quick Sort
+  - Heap Sort
 
 ## 🛠️ Ferramentas Utilizadas
 
